@@ -1,12 +1,13 @@
 import React from 'react';
 import ProfileCard from './ProfileCard';
-import Project from './Project';
+import ProfileInfo from './ProfileInfo';
 import "../assets/css/Profile.css"
+import users from "../assets/data/users"
 const Profile = () => {
   return (
     <div className="Profile container">
         <ProfileCard />
-        <Project />
+        <ProfileInfo users={users} />
     </div>
   )
 }
