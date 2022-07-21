@@ -1,26 +1,39 @@
-import React from 'react'
-// import ProfileImage from "../assets/img/profileImg.jpg";
 import '../assets/css/Navbar.css'
+import { Navbar, Nav, Container } from "react-bootstrap";
+import React, {useState, Component} from 'react'
+import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.svg';
 
-const Navbar = () => {
+const NavBar = (props) => {
+  const [activeLink, setActivelink] = useState('home')
   return (
-    <div className='Navbar bg-light navbar navbar-expand-lg navbar-light container'>
-          <div className="container">
-            <a className="nav-link d-flex" href="index.html"> <span><h1>Tu Nguyen</h1></span></a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navmenu">
-                <ul className="navbar-nav ms-auto">
-                    <li className="nav-item"><a className="nav-link" href="index.html" alt="home page">Home</a></li>
-                    <li className="nav-item"><a class="nav-link" href="#about" alt="about me">About</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#portfolio" alt="my portfolio">Project</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#contact" alt="click here to contact me">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        </div>
+    <Navbar className="container rounded-3" bg="light" text="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home"> 
+        <h1 style={props.style}>{props.title}</h1>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#skills">Skills</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
+          </Nav>
+          <span className="navbar-text">
+            {/* <div className="social-icon">
+              <a href="#"><img src={navIcon1} alt="" /></a>
+              <a href="#"><img src={navIcon2} alt="" /></a>
+              <a href="#"><img src={navIcon3} alt="" /></a>
+            </div> */}
+            
+          </span>
+        </Navbar.Collapse>
+        
+      </Container>
+      
+    </Navbar>
   )
 }
 
-export default Navbar
+export default NavBar

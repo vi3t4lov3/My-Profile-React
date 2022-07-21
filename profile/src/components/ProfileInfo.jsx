@@ -1,19 +1,15 @@
 import React from 'react'
-
 import "../assets/css/ProfileInfo.css"
-const Project = ({users}) => {
+import Projects from './Projects'
+import Skills from './Skills'
+
+const ProfileInfo = () => {
   return (
     <div className="ProfileInfo">
-     <h1>Testing Data using props</h1>
-     <ul className="list-group">
-        {users.map((user) => (
-          <li className="list-group-item" key={user.login.uuid}>
-            {`${user.name.first} ${user.name.last} (${user.location.street.nub})`}
-          </li>
-        ))}
-      </ul>
+      <Projects />
+      <Skills />
     </div>
   )
 }
 
-export default Project
+export default ProfileInfo
