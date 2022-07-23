@@ -10,7 +10,7 @@ const Home = () => {
   const title ='Tu Nguyen'
   const styles ={
     title: {
-      color: 'blue', 
+      color: '#060D35', 
       fontWeight: 'light'
     }
     
