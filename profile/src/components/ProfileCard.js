@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Cover from "../assets/img/cover.jpg";
 import Profile from "../assets/img/profileImg.jpg";
 import resume from "../assets/docs/TuResume.pdf"
@@ -87,7 +88,9 @@ const ProfileCard = () => {
                         </li>
                     </ul>
                     </div>
-                  </div>
+
+                    
+          </div>
       </div>
     </div>
   )

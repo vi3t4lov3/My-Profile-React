@@ -1,0 +1,5 @@
+/* footer */
+.footer-scoll {
+    max-height: 145px;
+    overflow-x: scroll;
+}

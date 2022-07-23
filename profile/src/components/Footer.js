@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/css/Footer.css'
 
-const Footer = () => {
+const Footer = ({gitRepos}) => {
   return (
     <div className="container box-shadow text-dark text-center position-relative">
         <div className="row my-3 text-center py-2">
@@ -51,8 +51,17 @@ const Footer = () => {
                 <div className="col-md">
                     <div className="card">
                         <div className="card-header"><h5>Github Repositories <span id="total-repos"></span></h5></div>
-                        <div id="my-repos" className="card-body text-secondary my-footer-box">
-                            Comming Soon
+                        <div id="my-repos" className="card-body text-secondary my-footer-box footer-scoll">
+                           
+                                <div className="card-body text-secondary my-footer-box">
+                                <ul className=" text-start">
+                                {gitRepos.map((repo) => (
+                                    <li key={repo.id}>
+                                        <a href={repo.html_url}>{repo.name}</a></li>
+                                        ))}
+                                </ul>   
+                            </div>
+                            
                           
                         </div>
                         </div>
