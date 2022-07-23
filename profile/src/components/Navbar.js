@@ -10,15 +10,16 @@ const NavBar = (props) => {
   return (
     <Navbar className="container rounded-3" bg="light" text="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home"> 
+        <Navbar.Brand href="/"> 
         <h1 style={props.style}>{props.title}</h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="skill">Skills</Nav.Link>
+            <Nav.Link href="project">Projects</Nav.Link>
+            <Nav.Link href="about">AboutMe</Nav.Link>
           </Nav>
           <span className="navbar-text">
             {/* <div className="social-icon">

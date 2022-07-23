@@ -4,7 +4,7 @@ const ProjectList = ({projects, title, handleDelete}) => {
   // const projects = props.projects;
   // console.log(props, projects)
   return (
-    <div className="Project-List">
+    <div className="Project-List ">
       <h1>{title}</h1>
         {projects.map((project) => (
         <div className="card bg-light text-dark p-1 py-2 my-2" key={project.id}>

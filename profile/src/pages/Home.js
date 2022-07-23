@@ -2,6 +2,10 @@ import React, {useState, useEffect} from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/Navbar'
 import Profile from '../components/Profile'
+import About from '../components/About'
+import Project from '../components/Projects'
+import Skill from '../components/Skills'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Home = () => {
   // const [currentPage, setCurrentPage] = useState('Home');
@@ -29,11 +33,23 @@ const Home = () => {
     
   }
   return (
-    <div className="Home">
-        <NavBar title={title} style={styles.title}/>
-        <Profile />
-        {gitRepos && <Footer gitRepos={gitRepos} /> }
+    <Router>
+    <div className="Home container">
+    <NavBar title={title} style={styles.title}/>
+          <Routes>
+            <Route path='/' element={<Profile />}>
+            </Route>
+            <Route path='/about' element={<About />}>
+            </Route>
+            <Route path='/project' element={<Project />}>
+            </Route>
+            <Route path='/skill' element={<Skill />}>
+            </Route>
+          </Routes>
+          {gitRepos && <Footer gitRepos={gitRepos} /> }
     </div>
+    </Router>
+    
   )
 }
 

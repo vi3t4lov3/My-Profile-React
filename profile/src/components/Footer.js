@@ -9,7 +9,7 @@ const Footer = ({gitRepos}) => {
             <div className="col-md">
                 <div className="card">
                     <div className="card-header"><h5>Social Connect</h5></div>
-                        <div className="card-body text-secondary my-footer-box">
+                        <div className="card-body text-secondary my-footer-box footer-scoll">
                             <ul className="text-start">
                                  {/* <ul className="list-unstyled text-start">  */}
                                 <li>
@@ -32,7 +32,7 @@ const Footer = ({gitRepos}) => {
             <div className="col-md">
                 <div className="card">
                     <div className="card-header"><h5>Learning Links</h5></div>
-                        <div className="card-body text-secondary my-footer-box">
+                        <div className="card-body text-secondary my-footer-box footer-scoll ">
                             <ul className=" text-start">
                                 <li>
                                     <a href="https://www.w3schools.com">W3Schools</a></li>
