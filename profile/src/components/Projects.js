@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <div className="Project">
       <ProjectList projects={projects} title = "PROJECTS" handleDelete={handleDelete}/>
-      <ProjectList projects={projects.filter((project) => project.author ==='tunguyen2')} title = "Tu Nguyen Projects" handleDelete={handleDelete}/>
+      {/* <ProjectList projects={projects.filter((project) => project.author ==='tunguyen2')} title = "Tu Nguyen Projects" handleDelete={handleDelete}/> */}
     </div>
   )
 
