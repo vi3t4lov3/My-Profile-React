@@ -1,6 +1,7 @@
 import React from 'react'
 import Cover from "../assets/img/cover.jpg";
 import Profile from "../assets/img/profileImg.jpg";
+import resume from "../assets/docs/TuResume.pdf"
 import "../assets/css/ProfileCard.css"
 const ProfileCard = () => {
   const ProfilePage = true;
@@ -47,7 +48,7 @@ const ProfileCard = () => {
           <div className="row text-center">
               <div className="col-md">
               <div className="text-center">
-                    <a className="text-decoration-none text-danger" href="../assets/docs/TuResume.pdf"> 
+                    <a className="text-decoration-none text-danger" href={resume}> 
                     <h5>VIEW MY RESUME</h5>
                     </a>
                 </div>

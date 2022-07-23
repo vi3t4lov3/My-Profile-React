@@ -1,7 +1,7 @@
 # My-Portfolio-React
 Repo: https://github.com/vi3t4lov3/My-Profile-React
 
-Demo: https://youtu.be/LmSDrcSg9d0
+Demo: https://blooming-brook-60737.herokuapp.com
 ## Description
 This repository holds the contents of my personal site
 
@@ -83,7 +83,7 @@ NO TEST THIS TIME
 
 ## LIVE DEMO
 
-[Click here] () 
+[Click here] (https://blooming-brook-60737.herokuapp.com) 
 ## Questions
 
 If you have questions about this repository reach me by Github: [vi3t4lov3](https://github.com/vi3t4lov3)
