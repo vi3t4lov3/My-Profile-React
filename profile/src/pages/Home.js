@@ -5,6 +5,7 @@ import Profile from '../components/Profile'
 import About from '../components/About'
 import Project from '../components/Projects'
 import Skill from '../components/Skills'
+import Contact from '../components/Contact'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Home = () => {
@@ -44,6 +45,8 @@ const Home = () => {
             <Route path='/project' element={<Project />}>
             </Route>
             <Route path='/skill' element={<Skill />}>
+            </Route>
+            <Route path='/contact' element={<Contact />}>
             </Route>
           </Routes>
           {gitRepos && <Footer gitRepos={gitRepos} /> }

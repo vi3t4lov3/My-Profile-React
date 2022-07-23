@@ -1,8 +1,10 @@
 import React from 'react'
-
+import ProfileCard from './ProfileCard'
 const About = () => {
   return (
-    <div>About Me</div>
+    <div>
+      <ProfileCard />
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ import '../assets/css/Footer.css'
 
 const Footer = ({gitRepos}) => {
   return (
-    <div className="container box-shadow text-dark text-center position-relative">
+    <div className=" box-shadow text-dark text-center">
         <div className="row my-3 text-center py-2">
 
             <div className="col-md">

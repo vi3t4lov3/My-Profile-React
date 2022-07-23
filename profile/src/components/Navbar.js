@@ -20,6 +20,7 @@ const NavBar = (props) => {
             <Nav.Link href="skill">Skills</Nav.Link>
             <Nav.Link href="project">Projects</Nav.Link>
             <Nav.Link href="about">AboutMe</Nav.Link>
+            <Nav.Link href="contact">Contact</Nav.Link>
           </Nav>
           <span className="navbar-text">
             {/* <div className="social-icon">

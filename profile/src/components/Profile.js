@@ -8,7 +8,7 @@ import fetchGitHub from "../assets/data/github"
 const Profile = () => {
     
   return (
-    <div className="Profile container">
+    <div className="Profile">
         <ProfileCard />
         <ProfileInfo users={users} />
     </div>
