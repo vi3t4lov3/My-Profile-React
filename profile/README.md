@@ -33,8 +33,8 @@ You can run a local copy of this site by issuing the following commands.
 $ git clone git@github.com:vi3t4lov3/My-Profile-React.git
 $ cd My-Profile-React
 $ Dont forget to run SOURCE schema.sql & seeds.sql in db folder
-$ run npm init 
-$ npm node .
+$ run npm i 
+$ npm start
 ```
 
 ## Usage
