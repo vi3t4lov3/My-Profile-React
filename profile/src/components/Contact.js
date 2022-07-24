@@ -1,13 +1,13 @@
 import React, { useState }  from 'react'
-import { checkPassword, validateEmail } from '../../src/utils/helpers';
+import {validateEmail } from '../../src/utils/helpers';
 import '../assets/css/Contact.css'
 
 const Contact = () => {
       // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
-  const [name, setname] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -16,12 +16,13 @@ const Contact = () => {
     const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, name, and password
-    if (inputType === 'email') {
+    if (inputType === 'name') {
+      setName(inputValue);
+    } 
+    else if (inputType === 'email') {
       setEmail(inputValue);
-    } else if (inputType === 'name') {
-      setname(inputValue);
     } else {
-      setPassword(inputValue);
+      setMessage(inputValue);
     }
   };
     const handleFormSubmit = (e) => {
@@ -29,22 +30,26 @@ const Contact = () => {
         e.preventDefault();
     
         // First we check to see if the email is not valid or if the name is empty. If so we set an error message to be displayed on the page.
-        if (!validateEmail(email)) {
-          setErrorMessage('Email is invalid');
+        if (!(name)) {
+          setErrorMessage('Please enter your name');
           return;
         }
-        if (!checkPassword(password)) {
+        if (!validateEmail(email)) {
+          setErrorMessage('Please enter a valid email');
+          return;
+        }
+        if (!(message)) {
           setErrorMessage(
-            `Choose a more secure password for the account: ${name}`
+            `Please type your message you want to sent`
           );
           return;
         }
-        alert(`Hello ${name}`);
+        setErrorMessage(`Your message had been sent successful`)
 
         // If everything goes according to plan, we want to clear out the input after a successful registration.
-        setname('');
-        setPassword('');
+        setName('');
         setEmail('');
+        setMessage('');
       };
   return (
     
@@ -79,29 +84,31 @@ const Contact = () => {
                             onChange={handleInputChange}
                             type="text" 
                             name="name" 
-                            placeholder="Your Name"
-                            required="required" />
+                            placeholder="Your Name"/>
                         </div>
-                        <div className="form-group">   
+                        <div className="form-group">
                             <label>Email: </label>
-                            <input className="form-control border-warning" t
+                            <input 
+                            className="form-control border-success" 
                             value={email}
-                            name="email"
                             onChange={handleInputChange}
-                            type="email"
-                            placeholder="email"/>
-                        </div>   
+                            type="text" 
+                            name="email" 
+                            placeholder="Your Email"/>
+                        </div>
                         <div className="form-group">   
                             <label>Message: </label>
                             <input className="form-control border-primary" 
-                             onChange={handleInputChange}
+                            onChange={handleInputChange}
                             type="text" 
                             name="message" 
                             placeholder="Your message" />
                         </div>    
                         <button className="btn btn-primary btn-lg my-1" 
                         onClick={handleFormSubmit}
-                        type="click"> 
+                        value={0}
+                        // name={value ? 1 : 0}
+                        type="submit"> 
                         Submit
                         </button>
                     </form>

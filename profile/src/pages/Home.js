@@ -20,7 +20,7 @@ const Home = () => {
     })
     .then(data => {
       setGitRepos(data)
-      console.log(data)
+      // console.log(data)
     })
     .catch(error => { console.log(error)}) 
   }, []);

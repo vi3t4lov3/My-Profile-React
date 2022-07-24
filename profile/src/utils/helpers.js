@@ -10,3 +10,11 @@ export function checkPassword(input) {
   }
   return false;
 }
+
+// export function checkMessage(input) {
+//   const passw = /^[A-Za-z]\w{7,14}$/;
+//   if (input.match(passw)) {
+//     return true;
+//   }
+//   return false;
+// }
