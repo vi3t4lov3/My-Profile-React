@@ -1,4 +1,5 @@
-{ "homepage": "http://vi3t4lov3/github.con/My-Profile-React",
+{
+  "homepage": "http://vi3t4lov3/github.con/My-Profile-React",
   "name": "profile",
   "version": "0.1.0",
   "private": true,
@@ -41,5 +42,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "Repo: https://github.com/vi3t4lov3/My-Profile-React",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vi3t4lov3/My-Profile-React.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vi3t4lov3/My-Profile-React/issues"
   }
 }
